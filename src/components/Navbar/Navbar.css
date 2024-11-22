@@ -1,0 +1,115 @@
+.navBar__container {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.navBar__container-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    position: relative;
+    cursor: pointer;
+}
+
+.navLinks {
+    display: none;
+}
+
+.flex-c-g {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart-wrapper {
+    position: relative;
+}
+
+.cart-wrapper>img {
+    cursor: pointer;
+}
+
+.cart-items {
+    width: 0.825rem;
+    padding: 0.125rem;
+    font-size: 0.525rem;
+    font-weight: bold;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    background-color: hsl(26, 100%, 55%);
+    color: hsl(223, 64%, 98%);
+    top: -0.625rem;
+    right: -0.125rem;
+}
+
+.avatar {
+    height: 1.6rem;
+    cursor: pointer;
+    outline: 1px solid transparent;
+    border-radius: 50%;
+    transition: outline 0.3s ease-in-out;
+}
+
+.avatar:hover {
+    outline: 1px solid hsl(26, 100%, 55%);
+}
+
+.hidden {
+    display: none;
+}
+
+
+@media screen and (min-width: 60em) {
+
+    .navBar__container-wrapper {
+        border-bottom: 1px solid hsl(223, 64%, 98%);
+        padding-bottom: 2.5rem;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .navLinks {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .navLinks>a {
+        position: relative;
+
+    }
+
+    .navLinks>a:hover::after {
+        content: '';
+        position: absolute;
+        top: 3.8rem;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background-color: hsl(26, 100%, 55%);
+        animation: underline 0.5s ease forwards;
+    }
+
+    @keyframes underline {
+        to {
+            width: 100%
+        }
+    }
+
+    .flex-c-g {
+        gap: 3.5rem;
+    }
+
+
+
+    a {
+        color: #68707d;
+        cursor: pointer;
+    }
+}

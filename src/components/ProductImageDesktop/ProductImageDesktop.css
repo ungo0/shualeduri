@@ -1,0 +1,60 @@
+.desktop-container {
+    display: none;
+}
+
+@media screen and (min-width: 50em) {
+    .desktop-container {
+        max-width: 25rem;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin: 0 auto;
+    }
+
+    .img-to-show-wrapper {
+        cursor: pointer;
+        height: 100%;
+
+    }
+
+    .img-to-show-wrapper>img {
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+    }
+
+    .img-blur-list {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .img-blur-list>button {
+        width: 20%;
+        height: 100%;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .img-blur-list>button>img {
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+    }
+
+    .img-blur-list>button:focus {
+        outline: 2px solid hsl(26, 100%, 55%);
+        border-radius: 1rem;
+        opacity: 0.4;
+    }
+
+
+}
+
+@media screen and (min-width: 75em) {
+    .desktop-container {
+        width: 30%;
+    }
+} 
